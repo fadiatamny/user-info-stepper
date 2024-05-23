@@ -7,12 +7,13 @@ interface AgeStepProps {
 }
 
 export const AgeStep: FC<AgeStepProps> = ({ data, update }) => {
-  const [age, setAge] = useState<number>(data.age || 1);
+  const [age, setAge] = useState<number | "">(data.age ?? "");
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const newAge = parseInt(event.target.value);
+    const newAge =
+      event.target.value === "" ? "" : parseInt(event.target.value);
     setAge(newAge);
-    update({ age: newAge });
+    update({ age: newAge === "" ? null : newAge });
   };
 
   return (

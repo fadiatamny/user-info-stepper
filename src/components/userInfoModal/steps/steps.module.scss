@@ -1,0 +1,17 @@
+.step {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 5px
+}
+
+.row {
+    margin: 15px;
+}
+
+.title {
+    margin-right: 10px;
+}

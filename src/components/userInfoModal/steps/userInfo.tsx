@@ -1,5 +1,6 @@
 import { ChangeEvent, FC, useState } from "react";
 import { UserInfo } from "../types";
+import styles from "./steps.module.scss";
 
 interface UserInfoStepProps {
   data: UserInfo;
@@ -21,26 +22,29 @@ export const UserInfoStep: FC<UserInfoStepProps> = ({ data, update }) => {
   };
 
   return (
-    <div>
-      <label>
-        First Name:
-        <input
-          type="text"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleInputChange}
-        />
-      </label>
-      <br />
-      <label>
-        Last Name:
-        <input
-          type="text"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleInputChange}
-        />
-      </label>
+    <div className={styles.step}>
+      <div className={styles.row}>
+        <label>
+          <span className={styles.title}>First Name:</span>
+          <input
+            type="text"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          <span className={styles.title}>Last Name:</span>
+          <input
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
     </div>
   );
 };

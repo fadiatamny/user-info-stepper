@@ -16,9 +16,18 @@ export const UserInfoModal: FC<UserInfoModalProps> = ({
     age: null,
   });
 
+  const cleanupData = () => {
+    setStepData({
+      firstName: null,
+      lastName: null,
+      age: null,
+    });
+  };
+
   const onFinish = async () => {
     await localStorage.setItem("userInfo", JSON.stringify(stepData));
 
+    cleanupData();
     closeModal();
   };
 
