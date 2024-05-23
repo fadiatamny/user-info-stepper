@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { isEmpty, isInteger, isString } from "lodash";
 import { Modal, ModalStep } from "../modal";
 import { UserInfoModalProps, UserInfo } from "./types";
@@ -15,6 +15,12 @@ export const UserInfoModal: FC<UserInfoModalProps> = ({
     lastName: null,
     age: null,
   });
+
+  useEffect(() => {
+    if (isModalOpen) {
+        cleanupData();
+    }
+  }, [isModalOpen]);
 
   const cleanupData = () => {
     setStepData({

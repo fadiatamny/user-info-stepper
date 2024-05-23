@@ -32,7 +32,7 @@
 }
 
 .closeBtn:hover {
-  color: #875ef793;
+  color: #7964b393;
 }
 
 .header {
@@ -55,11 +55,24 @@
   background: none;
   border: none;
   padding: 5px 10px;
+  width: 4vw;
   color: inherit;
   font: inherit;
   cursor: pointer;
 }
 
 .button:hover {
-  color: #875ef793;
+  color: #7964b393;
+}
+
+.nextButton {
+  background-color: #716d7c93;
+}
+.nextButton:hover {
+  color: #fafafa;
+  background-color: #7964b393;
+}
+.nextButton:disabled:hover {
+  color: #fafafa;
+  background-color: #716d7c93;
 }

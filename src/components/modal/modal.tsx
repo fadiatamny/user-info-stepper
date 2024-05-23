@@ -68,8 +68,7 @@ export const Modal: FC<ModalProps> = ({ show, onClose, steps, onFinish }) => {
             Previous
           </button>
           <button
-            className={styles.button}
-            style={{ backgroundColor: "#716d7c93" }}
+            className={`${styles.button} ${styles.nextButton}`}
             onClick={nextStep}
             disabled={!isValid}
           >
