@@ -34,7 +34,7 @@ export const UserInfoStep: FC<UserInfoStepProps> = ({ data, update }) => {
           />
         </label>
       </div>
-      <div>
+      <div className={styles.row}>
         <label>
           <span className={styles.title}>Last Name:</span>
           <input
