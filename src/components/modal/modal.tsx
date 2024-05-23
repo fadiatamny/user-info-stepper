@@ -1,7 +1,7 @@
-import { FC, useState, useEffect, ReactNode } from "react";
+import { FC, useState, useEffect } from "react";
 import styles from "./modal.module.scss";
 
-interface ModalStep {
+export interface ModalStep {
   title: string;
   isValid: () => boolean;
   component: React.ReactNode;
